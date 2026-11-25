@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Эльстома — стоматологический центр в Бишкеке</title>
+<meta name="description" content="Эльстома — стоматологический центр в Бишкеке. мкр Кок-Жар, 1, цокольный этаж. Приём по предварительной записи. Запись по телефону и в WhatsApp.">
+<meta name="theme-color" content="#060B1E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 -60 100 120'%3E%3Cpath fill='%2314B8FF' d='M-36,-50 C-38,-60 38,-60 36,-50 C40,-10 34,40 20,52 C10,60 -10,60 -20,52 C-34,40 -40,-10 -36,-50Z'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ================= PRELOADER: зубная нить через буквы ================= -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader__svg" viewBox="0 0 1000 220" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <mask id="flossFront" maskUnits="userSpaceOnUse" x="-100" y="0" width="1200" height="220">
+        <g id="flossMaskRects" fill="#fff"></g>
+      </mask>
+      <filter id="flossGlow" x="-20%" y="-50%" width="140%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <path class="floss floss--back" id="flossBack" filter="url(#flossGlow)"/>
+    <text class="preloader__word" x="500" y="150" text-anchor="middle" textLength="900" lengthAdjust="spacingAndGlyphs">ЭЛЬСТОМА</text>
+    <path class="floss floss--front" id="flossFrontPath" mask="url(#flossFront)" filter="url(#flossGlow)"/>
+  </svg>
+  <div class="preloader__count"><span id="preCount">0</span>%</div>
+  <div class="preloader__note">протягиваем нить…</div>
+</div>
+
+<!-- ================= CURSOR: стоматологическое зеркальце ================= -->
+<div class="mirror" id="mirror" aria-hidden="true">
+  <div class="mirror__handle"></div>
+  <div class="mirror__lens"><div class="mirror__view" id="mirrorView"></div><div class="mirror__shine"></div></div>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo" aria-label="Эльстома — наверх">
+    <svg viewBox="-50 -60 100 120" class="nav__tooth" aria-hidden="true"><path d="M-36,-50 C-38,-60 38,-60 36,-50 C40,-10 34,40 20,52 C10,60 -10,60 -20,52 C-34,40 -40,-10 -36,-50Z"/></svg>
+    <span>ЭЛЬ<b>СТОМА</b></span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Разделы">
+    <a href="#services">Услуги</a>
+    <a href="#why">Почему мы</a>
+    <a href="#doctors">Врачи</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <div class="nav__actions">
+    <a href="#book" class="btn btn--sm btn--ink">Записаться</a>
+    <button class="nav__burger" id="navBurger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" data-theme="light">
+  <div class="hero__sticky">
+    <div class="hero__meta">
+      <span>Стоматологический центр</span>
+      <span class="live-dot"><i></i> Бишкек · Кок-Жар</span>
+    </div>
+    <h1 class="hero__title" id="heroTitle"><span class="hero__word">ЭЛЬ</span><span class="hero__word hero__word--accent">СТОМА</span></h1>
+
+    <div class="smile-wrap">
+      <svg class="smile" id="smile" viewBox="0 0 1000 300" role="img" aria-label="Улыбка: зубы выравниваются при прокрутке">
+        <defs>
+          <linearGradient id="enamel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset=".75" stop-color="#EEF5FF"/>
+            <stop offset="1" stop-color="#D6E7FF"/>
+          </linearGradient>
+          <filter id="toothGlow" x="-40%" y="-40%" width="180%" height="180%">
+            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#14B8FF" flood-opacity=".28"/>
+          </filter>
+        </defs>
+        <path class="smile__gum" id="smileGum" d=""/>
+        <g id="teeth"></g>
+        <path class="smile__wire" id="smileWire" d=""/>
+        <g id="brackets"></g>
+      </svg>
+      <div class="smile__badge" id="smileBadge">✦ Идеально ровно</div>
+    </div>
+
+    <div class="hero__bottom">
+      <p class="hero__lead">Лечение, протезирование и&nbsp;эстетика зубов в&nbsp;одном центре. Приём <b>по предварительной записи</b> — подберём удобное время.</p>
+      <div class="hero__ctas">
+        <a href="#book" class="btn btn--neon btn--lg">Записаться</a>
+        <a href="tel:+996773907878" class="btn btn--ghost btn--lg">+996 773 907 878</a>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span></span>Листайте — выровняем улыбку</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES (BENTO) ================= -->
+<section class="section services" id="services" data-theme="light">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">01 / Услуги</span>
+      <h2 class="h2">Всё для здоровой<br>улыбки — <em>в одном месте</em></h2>
+    </div>
+
+    <div class="bento">
+      <article class="card card--dark b-xl reveal">
+        <span class="card__tag">Без ожидания</span>
+        <div class="card__big">08:00</div>
+        <h3>Приём с самого утра</h3>
+        <p>Работаем по предварительной записи: позвоните или напишите в WhatsApp — подберём удобное время.</p>
+        <a href="tel:+996773907878" class="btn btn--neon">Позвонить сейчас</a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M10 10c3-4 25-4 28 0 3 9 0 22-5 28-2 3-5 1-5-2l-2-8h-4l-2 8c0 3-3 5-5 2-5-6-8-19-5-28z"/><circle cx="30" cy="18" r="3"/></svg></div>
+        <h3>Лечение кариеса</h3>
+        <p>Светоотверждаемые пломбы в цвет эмали.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M10 10c3-4 25-4 28 0 3 9 0 22-5 28-2 3-5 1-5-2l-2-8h-4l-2 8c0 3-3 5-5 2-5-6-8-19-5-28z"/><path d="M20 18v18M28 18v18"/></svg></div>
+        <h3>Лечение каналов</h3>
+        <p>Пульпит и периодонтит — сохраняем зуб.</p>
+      </article>
+
+      <article class="card card--accent b-wide reveal">
+        <span class="card__tag">Эстетика</span>
+        <h3>Виниры и отбеливание</h3>
+        <p>Ровный цвет и форма зубов — улыбка, которую хочется показывать.</p>
+        <div class="card__shine" aria-hidden="true"></div>
+      </article>
+
+      <article class="card b-tall reveal">
+        <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M12 10l6 4 6-6 6 6 6-4-2 10H14z"/><path d="M14 20c-1 8 1 18 5 22 2 2 3-6 5-6s3 8 5 6c4-4 6-14 5-22"/></svg></div>
+        <h3>Протезирование</h3>
+        <p>Коронки и мосты — восстанавливаем разрушенные и утраченные зубы функционально и эстетично.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 48 48"><rect x="6" y="16" width="8" height="14" rx="3"/><rect x="20" y="16" width="8" height="14" rx="3"/><rect x="34" y="16" width="8" height="14" rx="3"/><path d="M2 23h44"/></svg></div>
+        <h3>Ортодонтия</h3>
+        <p>Брекеты и элайнеры для ровного прикуса.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M8 40 30 18M26 14l8 8M30 10l8 8 4-4-8-8z"/></svg></div>
+        <h3>Хирургия</h3>
+        <p>Удаление зубов, в том числе зубов мудрости.</p>
+      </article>
+
+      <article class="card card--line b-wide reveal">
+        <div class="card__icon"><svg viewBox="0 0 48 48"><path d="M6 24c4-6 8-6 12 0s8 6 12 0 8-6 12 0"/><path d="M6 32c4-6 8-6 12 0s8 6 12 0 8-6 12 0" opacity=".5"/><path d="M6 16c4-6 8-6 12 0s8 6 12 0 8-6 12 0" opacity=".5"/></svg></div>
+        <h3>Профессиональная гигиена</h3>
+        <p>Ультразвуковая чистка, удаление налёта и камня — с этого начинается здоровье зубов.</p>
+      </article>
+
+      <a href="#map-teeth" class="card card--cta reveal">
+        <span class="card__tag">Не знаете, что нужно?</span>
+        <h3>Покажите зуб на схеме →</h3>
+        <p>Подскажем услугу за секунду.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOOTH MAP ================= -->
+<section class="section toothmap" id="map-teeth" data-theme="dark">
+  <div class="container toothmap__grid">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--neon">02 / Диагностика</span>
+      <h2 class="h2">Где болит?<br><em>Покажите зуб</em></h2>
+      <p class="muted">Наведите курсор (или нажмите) на зуб — подскажем, какая проблема встречается чаще всего и как мы её решаем.</p>
+      <div class="tooth-info" id="toothInfo" aria-live="polite">
+        <span class="tooth-info__num" id="tiNum">—</span>
+        <h3 id="tiTitle">Выберите зуб на схеме</h3>
+        <p class="tooth-info__problem" id="tiProblem">Каждый зуб — свои типичные проблемы.</p>
+        <p class="tooth-info__service" id="tiService"></p>
+        <a href="#book" class="btn btn--neon btn--sm" id="tiBtn">Записаться</a>
+      </div>
+    </div>
+    <div class="arch-wrap reveal">
+      <svg class="arch" id="arch" viewBox="0 0 600 640" aria-label="Интерактивная схема зубов"></svg>
+      <div class="arch-tip" id="archTip" role="tooltip"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="section why" id="why" data-theme="light">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">03 / Почему мы</span>
+      <h2 class="h2">Без очередей<br><em>и ожидания</em></h2>
+    </div>
+    <div class="stats stats--3">
+      <div class="stat reveal">
+        <div class="stat__num"><span class="counter" data-to="6">0</span></div>
+        <p>дней в неделю — с понедельника по субботу</p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num">08:00</div>
+        <p>начинаем приём с самого утра</p>
+      </div>
+      <div class="stat stat--neon reveal">
+        <div class="stat__num"><span class="counter" data-to="100">0</span>%</div>
+        <p>приём по записи — без очередей</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOCTORS ================= -->
+<section class="section doctors" id="doctors" data-theme="light">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">04 / Врачи</span>
+      <h2 class="h2">Лёгкие&nbsp;руки&nbsp;—<br><em>это про нас</em></h2>
+      <p class="muted">Наведите на карточку (или нажмите на неё), чтобы узнать опыт и специализацию.</p>
+    </div>
+    <div class="docs">
+      <button class="doc reveal" type="button" aria-label="Тогузбаев Надирбек Тогузбаевич, руководитель, врач-стоматолог ортопед, опыт 30+ лет">
+        <div class="doc__inner">
+          <div class="doc__face doc__front">
+            <div class="doc__photo"><img src="img/doctors/1.jpg" alt="Тогузбаев Надирбек Тогузбаевич" width="720" height="960" loading="lazy" decoding="async"></div>
+            <div class="doc__cap"><b>Тогузбаев<br>Надирбек Тогузбаевич</b><span>Руководитель клиники</span></div>
+          </div>
+          <div class="doc__face doc__back">
+            <span class="doc__exp">30+<small>лет опыта</small></span>
+            <b>Тогузбаев Надирбек Тогузбаевич</b>
+            <p class="doc__role">Руководитель, врач-стоматолог ортопед</p>
+            <p>Коронки, мосты и протезы — восстанавливает функцию и эстетику зубов.</p>
+          </div>
+        </div>
+      </button>
+      <button class="doc reveal" type="button" aria-label="Жуманалиев Акжол Кукенович, врач-ортопед и зубной техник, опыт 18+ лет">
+        <div class="doc__inner">
+          <div class="doc__face doc__front">
+            <div class="doc__photo"><img src="img/doctors/2.jpg" alt="Жуманалиев Акжол Кукенович" width="720" height="960" loading="lazy" decoding="async"></div>
+            <div class="doc__cap"><b>Жуманалиев<br>Акжол Кукенович</b><span>Врач-ортопед, зубной техник</span></div>
+          </div>
+          <div class="doc__face doc__back">
+            <span class="doc__exp">18+<small>лет опыта</small></span>
+            <b>Жуманалиев Акжол Кукенович</b>
+            <p class="doc__role">Врач-ортопед и зубной техник</p>
+            <p>Совмещает работу врача и техника: конструкции продумываются и изготавливаются под конкретного пациента.</p>
+          </div>
+        </div>
+      </button>
+      <button class="doc reveal" type="button" aria-label="Маматова Аида Манапбаевна, врач-стоматолог терапевт, опыт 11+ лет">
+        <div class="doc__inner">
+          <div class="doc__face doc__front">
+            <div class="doc__photo"><img src="img/doctors/3.jpg" alt="Маматова Аида Манапбаевна" width="720" height="960" loading="lazy" decoding="async"></div>
+            <div class="doc__cap"><b>Маматова<br>Аида Манапбаевна</b><span>Врач-терапевт</span></div>
+          </div>
+          <div class="doc__face doc__back">
+            <span class="doc__exp">11+<small>лет опыта</small></span>
+            <b>Маматова Аида Манапбаевна</b>
+            <p class="doc__role">Врач-стоматолог терапевт</p>
+            <p>Лечение кариеса и каналов, пломбы, профессиональная гигиена.</p>
+          </div>
+        </div>
+      </button>
+      <button class="doc reveal" type="button" aria-label="Кулатаева Мээрим Туратбековна, врач-стоматолог терапевт, опыт 15+ лет">
+        <div class="doc__inner">
+          <div class="doc__face doc__front">
+            <div class="doc__photo"><img src="img/doctors/4.jpg" alt="Кулатаева Мээрим Туратбековна" width="720" height="960" loading="lazy" decoding="async"></div>
+            <div class="doc__cap"><b>Кулатаева<br>Мээрим Туратбековна</b><span>Врач-терапевт</span></div>
+          </div>
+          <div class="doc__face doc__back">
+            <span class="doc__exp">15+<small>лет опыта</small></span>
+            <b>Кулатаева Мээрим Туратбековна</b>
+            <p class="doc__role">Врач-стоматолог терапевт</p>
+            <p>Лечение кариеса и каналов, пломбы, профессиональная гигиена.</p>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="section reviews" id="reviews" data-theme="dark">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--neon">05 / Отзывы</span>
+      <h2 class="h2">Говорят<br><em>пациенты</em></h2>
+    </div>
+    <div class="revs">
+      <div class="rev rev--score reveal">
+        <div class="rev__score">★</div>
+        <p>Были у нас? Расскажите о своём визите — нам важно каждое мнение.</p>
+        <a class="btn btn--neon btn--sm" href="https://2gis.kg/bishkek/firm/70000001020345197/tab/reviews" target="_blank" rel="noopener">Оставить отзыв в 2ГИС</a>
+      </div>
+      <figure class="rev reveal">
+        <blockquote>«Отличная стоматология. Врач знает своё дело. Мне зубы поставил просто супер. Рекомендую.»</blockquote>
+        <figcaption><span class="rev__ava">М</span>Мираим <small>· 2ГИС</small></figcaption>
+      </figure>
+      <figure class="rev reveal">
+        <blockquote>«Всем здравствуйте! Я был там, и на удивление там очень классно, круто, и врачи классные. Всем, кто не был там, советую…»</blockquote>
+        <figcaption><span class="rev__ava">А</span>Айбек <small>· 2ГИС</small></figcaption>
+      </figure>
+      <figure class="rev reveal">
+        <blockquote>«Лучший стоматолог в Бишкеке.»</blockquote>
+        <figcaption><span class="rev__ava">А</span>Али <small>· 2ГИС</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section faq" id="faq" data-theme="light">
+  <div class="container faq__grid">
+    <div class="section__head reveal">
+      <span class="eyebrow">06 / FAQ</span>
+      <h2 class="h2">Частые<br><em>вопросы</em></h2>
+    </div>
+    <div class="faq__list">
+      <details class="qa reveal">
+        <summary>Нужно ли записываться заранее?</summary>
+        <div class="qa__a"><p>Да, приём идёт по предварительной записи — так вам не придётся ждать. Позвоните или напишите в WhatsApp, и мы подберём удобное время. Мы работаем с понедельника по субботу с 08:00 до 18:00, воскресенье — выходной.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Мне очень страшно. Будет больно?</summary>
+        <div class="qa__a"><p>Лечение проходит под местной анестезией. Врач заранее объяснит каждый шаг — многие пациенты в отзывах пишут, что боялись зря.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Сколько стоит лечение?</summary>
+        <div class="qa__a"><p>Стоимость зависит от диагноза и объёма работы. Точную цену врач назовёт после осмотра.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Как записаться на приём?</summary>
+        <div class="qa__a"><p>Заполните форму ниже, позвоните по номеру +996 773 907 878 или напишите в WhatsApp — подберём удобное время.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Как вас найти?</summary>
+        <div class="qa__a"><p>Бишкек, микрорайон Кок-Жар, 1, цокольный этаж (Октябрьский район). Маршрут удобно построить в 2ГИС — кнопка в разделе «Контакты».</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING FORM ================= -->
+<section class="section book" id="book" data-theme="dark">
+  <div class="container book__grid">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--neon">07 / Запись</span>
+      <h2 class="h2 h2--xl">Запишитесь<br><em>за 30 секунд</em></h2>
+      <p class="muted">Заявка откроется в WhatsApp с уже заполненным текстом — останется нажать «Отправить». Администратор подтвердит время.</p>
+    </div>
+    <form class="form reveal" id="bookForm" novalidate>
+      <label class="field">
+        <span>Ваше имя</span>
+        <input name="name" type="text" autocomplete="name" required placeholder="Айгуль">
+      </label>
+      <label class="field">
+        <span>Что беспокоит</span>
+        <select name="service">
+          <option>Острая боль</option>
+          <option>Лечение кариеса</option>
+          <option>Лечение каналов</option>
+          <option>Профгигиена / чистка</option>
+          <option>Виниры / отбеливание</option>
+          <option>Протезирование / коронки</option>
+          <option>Брекеты / элайнеры</option>
+          <option>Удаление зуба</option>
+          <option>Консультация</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Удобное время</span>
+        <input name="time" type="text" placeholder="Например, завтра после 18:00">
+      </label>
+      <p class="form__err" id="formErr" role="alert"></p>
+      <button class="btn btn--neon btn--lg btn--block" type="submit">Отправить заявку</button>
+      <a class="form__go" id="formGo" href="https://wa.me/996773907878" target="_blank" rel="noopener" hidden>WhatsApp не открылся? Нажмите здесь, чтобы отправить заявку</a>
+      <p class="small muted">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= CONTACTS + MAP ================= -->
+<section class="section contacts" id="contacts" data-theme="dark">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--neon">08 / Контакты</span>
+      <h2 class="h2">Мы на <em>снимке</em></h2>
+    </div>
+    <div class="contacts__grid">
+      <div class="map" id="mapBox" data-lenis-prevent>
+        <div class="map__canvas" id="map" role="img" aria-label="Схема: клиника Эльстома, мкр Кок-Жар, 1, Бишкек"><div class="mapx" id="mapLayer"></div></div>
+        <div class="map__tint" aria-hidden="true"></div>
+        <div class="map__grid" aria-hidden="true"></div>
+        <div class="map__scan" aria-hidden="true"><i></i></div>
+        <div class="map__hud" aria-hidden="true">
+          <span>X-RAY / BISHKEK</span><span id="mapCoords">42.8514° N · 74.6328° E</span>
+        </div>
+        <div class="map__found" id="mapFound" aria-hidden="true">Клиника найдена</div>
+        <div class="map__zoom"><button type="button" id="mapIn" aria-label="Приблизить">+</button><button type="button" id="mapOut" aria-label="Отдалить">−</button></div>
+        <div class="map__note" aria-hidden="true">Схема района · точный маршрут — в приложениях</div>
+        <button class="map__recenter" id="mapRecenter" type="button" aria-label="Показать клинику на карте">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+        </button>
+        <div class="map__apps">
+          <a href="https://2gis.kg/bishkek/firm/70000001020345197" target="_blank" rel="noopener">2ГИС</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=42.851449,74.63275" target="_blank" rel="noopener">Google Maps</a>
+          <a href="https://yandex.ru/maps/?pt=74.63275,42.851449&amp;z=17&amp;l=map" target="_blank" rel="noopener">Яндекс</a>
+        </div>
+      </div>
+
+      <aside class="ccard reveal">
+        <div class="status" id="openStatus"><i></i><span>Проверяем…</span></div>
+        <h3 class="ccard__name">Эльстома</h3>
+        <dl class="ccard__list">
+          <div><dt>Адрес</dt><dd>мкр Кок-Жар, 1, цокольный этаж<br><span class="muted">Октябрьский район, Бишкек, 720082</span></dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+996773907878">+996 773 907 878</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/996773907878" target="_blank" rel="noopener">+996 773 907 878</a></dd></div>
+          <div><dt>График</dt><dd>Пн–Сб: 08:00–18:00<br>Вс: выходной<br><span class="muted">Приём по предварительной записи</span></dd></div>
+        </dl>
+        <div class="ccard__btns">
+          <a class="btn btn--neon btn--block" href="https://2gis.kg/bishkek/directions/points/%7C74.63275%2C42.851449%3B70000001020345197" target="_blank" rel="noopener">Построить маршрут в 2ГИС</a>
+          <a class="btn btn--ghost-l" href="tel:+996773907878">Позвонить</a>
+          <a class="btn btn--ghost-l" href="https://wa.me/996773907878" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" data-theme="dark">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <p class="footer__claim">Улыбайтесь<br>смело.</p>
+        <a href="#book" class="btn btn--neon">Записаться</a>
+      </div>
+      <div class="footer__cols">
+        <div><b>Связь</b><a href="tel:+996773907878">+996 773 907 878</a><a href="https://wa.me/996773907878" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div><b>Мы на карте</b><a href="https://2gis.kg/bishkek/firm/70000001020345197" target="_blank" rel="noopener">2ГИС</a></div>
+        <div><b>Адрес</b><span>мкр Кок-Жар, 1, цокольный этаж, Бишкек</span></div>
+      </div>
+    </div>
+    <div class="footer__word" aria-hidden="true">ЭЛЬСТОМА</div>
+    <div class="footer__bottom"><span>© <span id="year">2026</span> Эльстома</span><span>Имеются противопоказания. Необходима консультация специалиста.</span></div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE STICKY BAR ================= -->
+<div class="mbar">
+  <a href="tel:+996773907878" class="mbar__btn mbar__call">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Позвонить
+  </a>
+  <a href="https://wa.me/996773907878" target="_blank" rel="noopener" class="mbar__btn mbar__wa">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.8-4.3-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.3.5-.4.5c-.2.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.7-.1 1.3z"/></svg>WhatsApp
+  </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="main.js?v=21" defer></script>
+</body>
+</html>
